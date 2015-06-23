@@ -1,4 +1,7 @@
+__author__ = "Anubi4"
 # -*- coding:utf-8 -*-
+
+"""用微信控制电脑关机"""
 
 import poplib
 import email
