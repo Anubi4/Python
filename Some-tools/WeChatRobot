@@ -1,0 +1,28 @@
+# -*- coding:utf-8 -*-
+
+import poplib
+import email
+import string
+import os
+import time
+
+host = "pop.163.com"
+username = "username@163.com"
+password = "password"
+
+while True:
+    
+    pp = poplib.POP3(host)
+    #pp.set_debuglevel(1)
+    pp.user(username)
+    pp.pass_(password)
+    mailid = pp.stat()[0]
+    message = pp.retr(mailid)[1]
+
+    mail = email.message_from_string(string.join(message, '\n'))
+
+    command = mail.get('subject')
+    print "lisenting..."
+    os.system(command)
+
+    time.sleep(60)
