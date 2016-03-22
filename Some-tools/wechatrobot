@@ -15,7 +15,7 @@ HOST = "pop.163.com"
 USERNAME = "username@163.com"
 PASSWORD = "password"
 
-def wechat_bot():
+def wechat_robot():
     pp = poplib.POP3(HOST)
     #pp.set_debuglevel(1)
     pp.user(USERNAME)
