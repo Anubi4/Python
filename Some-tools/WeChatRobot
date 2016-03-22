@@ -11,16 +11,15 @@ import string
 import os
 import time
 
-host = "pop.163.com"
-username = "username@163.com"
-password = "password"
+HOST = "pop.163.com"
+USERNAME = "username@163.com"
+PASSWORD = "password"
 
-while True:
-    
-    pp = poplib.POP3(host)
+def wechat_bot():
+    pp = poplib.POP3(HOST)
     #pp.set_debuglevel(1)
-    pp.user(username)
-    pp.pass_(password)
+    pp.user(USERNAME)
+    pp.pass_(PASSWORD)
     mailid = pp.stat()[0]
     message = pp.retr(mailid)[1]
 
@@ -31,3 +30,7 @@ while True:
     os.system(command)
 
     time.sleep(60)
+
+if __name__ == '__main__':
+    while True:
+        wechat_robot()
