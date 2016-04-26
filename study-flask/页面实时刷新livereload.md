@@ -8,3 +8,7 @@ def dev():
     live_server.watch('**/'*.*')    #实时监控所有页面
     live_server.serve(open_url=True)
 ```
+
+```
+python app.py dev
+```
